@@ -1,0 +1,10 @@
+{% extends 'results.html' %}
+
+{% block body %}
+    <h1 style = "font: 20px Montserrat, sans-serif;">Articles</h1>
+   <u1 class = "list-group">
+{% for item in article %}
+<li style = "background-color: #fc6837;" class = "list-group-item">{{item}}{% if not loop.last %},{% endif %}</li>
+{% endfor %}
+</u1>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Top 20 Reddit Posts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+	  
+	  
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #FE4808; /*Orange*/
+      color: #ffffff; /* Font color */
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+	  height: 100vh;
+	  
+  }
+  .form-control{
+	background-color: #fc6837;
+	border-color: #fc6837;
+	color: white;
+	}
+	.form-control:focus{
+		border-color: #ffca0c;
+		}
+		.row{
+		  height: 200px;
+    width: 800px;
+
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -400px;
+	}
+  </style>
+</head>
+<body>
+
+
+<!-- First Container -->
+<div ng-app="" class="container-fluid bg-1 text-center">
+
+<div class = "row" >
+	<div class = "col-xs-6" align = "right">
+  <h3 class="margin">Top 20 Posts on reddit.com/r/</h3>
+  </div>
+  <div class = "col-xs-6" align = "left" style = "margin-top: 16px; margin-left: -25px;">
+  <form action="{{ url_for('handle_data') }}" method="post">
+	<input type="text" name = "projectFilepath" class="form-control col-xs-3" ng-model='link' id="usr" required>
+	<button style = "margin-top: 20px" type="submit" class="btn btn-danger">Go!</button>
+	</form>
+	</div>
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>

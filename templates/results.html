@@ -1,0 +1,40 @@
+<!-- The basic html layout of the app -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		 <style>
+			body {
+				font: 20px Montserrat, sans-serif;
+				line-height: 1.8;
+				color: #f5f6f7;
+			}
+			.bg-1 { 
+				background-color: #FE4808; /*Orange*/
+				color: #ffffff; /* Font color */
+				}			
+			li{
+				background-color: #fc6837;
+			}
+		</style>
+	  
+  
+    </head>
+    <body>
+     
+        <div class="container-fluid bg-1">
+            <!-- allows messages to be displayed -->
+  
+            {% block body %}{% endblock %}
+        </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//cdn.ckeditor.com/4.7.2/basic/ckeditor.js"></script>
+        <script type="text/javascript">
+            CKEDITOR.replace('editor')
+        </script>
+    </body>
+</html>
